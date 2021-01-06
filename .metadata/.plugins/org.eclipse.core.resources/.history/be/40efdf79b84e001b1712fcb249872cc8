@@ -1,0 +1,29 @@
+package variaveis;
+
+public class Carrinho {
+
+	public static void main(String[] args) {
+		String nome = "Liquidificador";
+		String categoria  ="Eletrodoméstico";
+		double valor = 1199.99;
+		int quantidade = 5;
+		double imposto = 5.50;
+		
+		System.out.println("Nome: " + nome);
+		System.out.println("Categoria: " + categoria);
+		System.out.println("Valor (R$): " + valor);
+		System.out.println("Quantidade: " + quantidade);
+		System.out.println("Imposto (R$): " + imposto);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

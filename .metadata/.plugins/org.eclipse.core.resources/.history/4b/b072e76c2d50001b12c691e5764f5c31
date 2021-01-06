@@ -1,0 +1,36 @@
+package repeticao;
+
+import javax.swing.JOptionPane;
+
+public class DesafioDo {
+
+	public static void main(String[] args) {
+		int numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o número"));
+		short cont = 0;
+
+		do {
+			
+			if(numero < 30) {
+				JOptionPane.showMessageDialog(null, "O número que voce digitou é menor que o número oculto");
+			}else if (numero > 30) {
+				JOptionPane.showMessageDialog(null, "O número que voce digitou é maior que o número oculto");
+			}
+			
+			numero = Integer.parseInt(JOptionPane.showInputDialog(null, "Você não acertou o número... Digite novamente outro número"));
+			cont++;
+			
+		}while(numero != 30);
+
+		JOptionPane.showMessageDialog(null, "Parabens!! Você acertou o número!");
+		JOptionPane.showMessageDialog(null, "Quantidade de tentativas: " + cont);
+		
+		
+	}
+
+
+
+
+	//(JOptionPane.showConfirmDialog(null, "Continuarw" , "Pergunta", JOptionPane.YES_NO_OPTION)== 0);
+
+
+}

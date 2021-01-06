@@ -1,0 +1,26 @@
+package variaveis;
+
+import javax.swing.JOptionPane;
+
+public class TiposPrimitivos {
+
+	public static void main(String[] args) {
+		
+		float nota_semestral1 = Float.parseFloat(JOptionPane.showInputDialog("Digite a nota semestral 1: "));
+		float nota_semestral2 = Float.parseFloat(JOptionPane.showInputDialog("Digite a nota semestral 2: "));
+		int qtde_faltas = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de faltas: "));
+		String nome_materia = JOptionPane.showInputDialog("Digite o nome da matéria: ");
+		float media = (nota_semestral1 + nota_semestral2)/2;
+		
+		if(media > 200) {
+			System.out.println("Reprovado por falta!");
+		}
+		System.out.println("Media: " + media);
+		
+		
+		
+		
+
+	}
+
+}
