@@ -64,21 +64,28 @@ public class Professor {
 	}
 
 	public String getSaudacao() {
-		if(formacao.equals("doutor")) {
-			return "PHD " + nome.substring(0,nome.indexOf(" "));
-		}else if(formacao.equals("mestre")) {
-			return "Ms. " + nome.substring(0,nome.indexOf(" "));
-		}else if(formacao.equals("especialista")) {
-			return "Especialista " + nome.substring(0,nome.indexOf(" "));
+
+		if(nome.contains(" ") == true) {
+			if(formacao.equals("doutor")) {
+				return "PhD " + nome.substring(0,nome.indexOf(" "));
+			}else if(formacao.equals("mestre")) {
+				return "Ms. " + nome.substring(0,nome.indexOf(" "));
+			}else if(formacao.equals("especialista")) {
+				return "Especialista " + nome.substring(0,nome.indexOf(" "));
+			}
 		}
-		return formacao;
-	}
-	
-	public float calculaSalario(int qtdeHoras) {
-		return valorHora*qtdeHoras;
-		
+		return nome + " - Sem formação";
 	}
 
+	public String calculaSalario(int qtdeHoras) {
+
+		float salarioBruto = (float) (valorHora * 1.06) *qtdeHoras; 
+		float fgts = salarioBruto * (float) 0.08;
+		float salarioLiquido = salarioBruto - fgts;
+		return "Salário Bruto: " + salarioBruto + "\n" + 
+		"FGTS: " + fgts + "\n" + 
+		"Salário Líquido: " + salarioLiquido;
+	}
 
 
 

@@ -5,7 +5,7 @@ public class Aluno {
 	public String fone;
 	public String nome;
 	public boolean ativo;
-	
+
 	public int getRm() {
 		return rm;
 	}
@@ -27,7 +27,7 @@ public class Aluno {
 	public boolean isAtivo() {
 		return ativo;
 	}
-	
+
 	public Aluno() {
 		super();
 	}
@@ -45,17 +45,21 @@ public class Aluno {
 	public String toString() {
 		return "Aluno [rm=" + rm + ", fone=" + fone + ", nome=" + nome + ", ativo=" + ativo + "]";
 	}
-	
+
 	public void setAll(int rm, String fone, String nome, boolean ativo) {
 		this.rm = rm;
 		this.fone = fone;
 		this.nome = nome;
 		this.ativo = ativo;
 	}
-	
+
 	public String getSaudacao() {
-		return nome.substring(0,nome.indexOf(" "));
+		if(nome.contains(" ") == true) {
+			return nome.substring(0,nome.indexOf(" "));	
+		}
+		return nome;
+
 	}
-	
+
 
 }
